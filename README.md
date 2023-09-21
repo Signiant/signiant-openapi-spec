@@ -1,1 +1,0 @@
-# signiant-openapi-spec
