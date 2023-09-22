@@ -29,13 +29,13 @@ NodeJs API client can be tested as follows:
 
 - Install [NodeJs](https://nodejs.org/en/download)
 - Update your server url to http://localhost:8080/ in the OAS specification file in the generated source.
-- Do npm i request
-- Do npm start
+- Add axios dependency in package.json and install `npm i axios`
+- Run the server - `npm start`
 - Execute API call, for example, http://localhost:8080/listUsers from postman.
 
 ```
 exports.listUsers = function(username,password) {
-    var request = require("request");
+    var axios = require("axios");
     var options = {
           method: "GET",
           url: "MANGAER_URL/listusers",
@@ -44,12 +44,13 @@ exports.listUsers = function(username,password) {
                       password: PASSWORD
                   },
     };
-    request(options, function (error, response, body) {
-        if (error) {
-          console.log(error)
-        };
-        console.log(body);
-    });
+    axios(options)
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
 ```
 

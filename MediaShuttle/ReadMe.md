@@ -35,13 +35,13 @@ NodeJs API client can be tested as follows:
 
 - Install [NodeJs](https://nodejs.org/en/download)
 - Update your server url to http://localhost:8080 in the OAS specification file in the generated source.
-- Do npm i request
-- Do npm start
+- Add axios dependency in package.json and install `npm i axios`
+- Run the server - `npm start`
 - Execute API call, for example, http://localhost:8080/storage from postman with Authorization: API_KEY in header.
 
 ```
 exports.getStorage = function(storageId) {
-    var request = require("request");
+    var axios = require("axios");
 
     var options = {
         method: "GET",
@@ -51,9 +51,12 @@ exports.getStorage = function(storageId) {
         },
     };
 
-    request(options, function (error, response, body) {
-        if (error) throw new Error(error);
-        console.log(body);
+    axios(options)
+    .then(function (response) {
+        console.log(response);
+    })
+    .catch(function (error) {
+        console.log(error);
     });
 }
 ```
