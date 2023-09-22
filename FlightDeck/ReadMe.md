@@ -1,4 +1,4 @@
-# Code Generation and Usage for Flight Deck Manager OAS specification
+# Code Generation and Usage for [Flight Deck Manager OAS specification](https://developer.signiant.com/openapi/managerOpenAPI.yaml)
 This documentation includes instructions to generate and test API client for different programming languages. Code for OAS specification can be generated using different tools like [Swagger Codegen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator).
 
 ## Client generation via Swagger Codegen
