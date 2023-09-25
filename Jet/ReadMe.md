@@ -3,19 +3,23 @@ This documentation includes instructions to generate and test API client for dif
 
 ## Client generation via Swagger Codegen
 
-```
 If you have swagger-codegen installed, use
+```
 swagger-codegen generate -i OAS_SPEC_PATH -l LANGUAGE -o OUTPUT_DIRECTORY
+```
 Else, you can use
+```
 java -jar swagger-codegen-cli.jar generate -i OAS_SPEC_PATH -l LANGUAGE -o OUTPUT_DIRECTORY
 ```
 
 ## Client generation via OpenAPI Generator
 
+If you have openapi-generator-cli installed, use
 ```
-If you have swagger-codegen installed, use
 openapi-generator-cli generate -i OAS_SPEC_PATH -g LANGUAGE -o OUTPUT_DIRECTORY
+```
 Else, you can use
+```
 java -jar openapi-generator-cli.jar generate -i OAS_SPEC_PATH -g LANGUAGE -o OUTPUT_DIRECTORY
 ```
 
